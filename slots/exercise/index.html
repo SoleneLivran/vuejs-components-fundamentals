@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue.js Slots Exercise</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <page-layout>
+            <template #header>
+                Here might be a page title
+            </template>
+
+            <p>A paragraph for the main content</p>
+            <p>And another one</p>
+
+            <template #footer>
+                <p>Here's some contact info</p>
+            </template>
+        </page-layout>
+    </div>
+
+    <script type="text/x-template" id="page-layout-template">
+        <div>
+            <h1>
+                <slot name="header">Titre</slot>
+            </h1>
+            <slot>Contenu</slot>
+            <slot name="footer">Contact info</slot>
+        </div>
+    </script>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="app.js"></script>
+
+    <style></style>
+
+</body>
+
+</html>

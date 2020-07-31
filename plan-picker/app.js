@@ -1,3 +1,4 @@
+// Compnents naming best practices https://vueschool.io/lessons/vuejs-component-naming-best-practices
 
 // Composant global :
 // Vue.component('plan', { ...}
@@ -6,8 +7,8 @@
 
 // MIEUX : declarer le composant en tant qu'objet JS, et l'enregistrer la ou on en a besoin
 // Composant declare en tant qu'objet JS :
-let PlanComponent = {
-  template : '#plan-template',
+let PlanPickerItemComponent = {
+  template : '#plan-picker-item-template',
   props: {
     name: {
       type: String,
@@ -43,7 +44,7 @@ let PlanPickerComponent = {
   // on register le composant enfant PlanComponent localement
   components: {
     // key = name og the component / value = objet
-    plan: PlanComponent
+    'plan-picker-item': PlanPickerItemComponent
   },
   data() {
     return {

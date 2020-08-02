@@ -7,11 +7,11 @@ let NotificationMessageComponent = {
     props: {
         header: {
             type: String,
-            required: true
+            default: 'Hello!'
         },
         type: {
             type: String,
-            required: true
+            default: 'info'
         }
     },
     data () {

@@ -37,8 +37,8 @@
 
     <!-- Template for Notification Message -->
     <script type="text/x-template" id="notification-message-template">
-        <div class="ui message" :class="type">
-            <i class="close icon"></i>
+        <div v-if="isDisplayed" class="ui message" :class="type">
+            <i @click="close" class="close icon"></i>
             <div class="header">
                 {{ header }}
             </div>

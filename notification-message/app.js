@@ -13,6 +13,16 @@ let NotificationMessageComponent = {
             type: String,
             required: true
         }
+    },
+    data () {
+        return {
+            isDisplayed: true
+        }
+    },
+    methods: {
+        close() {
+            this.isDisplayed = false
+        }
     }
 }
 

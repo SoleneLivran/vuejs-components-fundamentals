@@ -9,7 +9,10 @@
     <div id="app" class="ui container">
         <h1>GitHub Profiles</h1>
         <div class="ui cards">
-            <github-user-card v-for="username in usernames" :username="username"></github-user-card>
+            <github-user-card
+                v-for="username in usernames"
+                :username="username"
+            ></github-user-card>
         </div>
     </div>
 
@@ -42,4 +45,5 @@
     <script src="app.js"></script>
 
 </body>
+
 </html>
